@@ -28,6 +28,11 @@ public class rec_adapter extends RecyclerView.Adapter<rec_adapter.ViewHolder> {
         }
     }
 
+    public void filterList(ArrayList<Patisserie> filteredList) {
+        patisserieList = filteredList;
+        notifyDataSetChanged();
+    }
+
     //Constructeur de l'adaptateur : initialisations de l’adapter et des données
     public rec_adapter(ArrayList<Patisserie> patisserieList) {
         this.patisserieList = patisserieList;
